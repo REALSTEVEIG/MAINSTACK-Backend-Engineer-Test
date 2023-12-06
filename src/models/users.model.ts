@@ -41,25 +41,6 @@ const userSchema = new Schema<IUser>({
     default: false,
   },
   profile: { type: mongoose.Schema.Types.ObjectId, ref: 'userProfileSchema' },
-  notifications: [
-    { type: mongoose.Schema.Types.ObjectId, ref: 'UserNotifications' },
-  ],
-  accessibility: [
-    { type: mongoose.Schema.Types.ObjectId, ref: 'UserAccessibility' },
-  ],
-  installedApps: [
-    {
-      appId: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-      },
-      appData: {
-        type: mongoose.Schema.Types.Mixed,
-        required: true,
-        default: [],
-      },
-    },
-  ],
   createdAt: Date,
   updatedAt: Date,
 });

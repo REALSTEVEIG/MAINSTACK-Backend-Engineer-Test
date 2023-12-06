@@ -33,11 +33,6 @@ const config: Config = {
     './src/loadEnv.ts',
     './src/server.ts',
     /* Ignore Oauth */
-    './src/controllers/auth/oauth.controller.ts',
-    './src/services/auth/oauth.ts',
-    './src/controllers/marketplace/get-app-details.controller.ts',
-    './src/services/marketplace/get-app-details.ts',
-    './src/controllers/marketplace/apps/google-calendar/events-watcher.controller.ts',
     './src/tests',
     './src/routes',
     './src/middlewares',

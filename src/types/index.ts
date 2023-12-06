@@ -202,10 +202,7 @@ export interface IUser extends Document {
   isEmailVerified: boolean;
   isSignupProcessCompleted: boolean;
   profile: Types.ObjectId; // Reference to UserProfile
-  notifications: Types.ObjectId[]; // Reference to UserNotifications
-  accessibility: Types.ObjectId[]; // Reference to UserAccessibility
   isDeactivated: boolean;
-  installedApps: [InstalledApp];
   createdAt: Date;
   updatedAt: Date;
 }
