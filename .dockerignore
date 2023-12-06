@@ -1,0 +1,10 @@
+**/node_modules
+**/dist
+Dockerfile
+
+# dotenv environment variables file
+.env.*
+.env.development
+.env.local
+.env.test
+.env.production

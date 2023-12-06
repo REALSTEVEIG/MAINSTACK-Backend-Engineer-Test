@@ -1,0 +1,1 @@
+autossh -M 0 -o "ServerAliveInterval 30" -R calen360.serveo.net:80:localhost:8000 serveo.net

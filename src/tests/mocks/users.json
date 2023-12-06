@@ -1,0 +1,133 @@
+[
+    {
+        "firstName": "Test",
+        "lastName": "User 1",
+        "email": "testuser1@Mainstack.com",
+        "password": "Test@123!",
+        "info": "This user is used by default for all operations"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 2",
+        "email": "testuser2@Mainstack.com",
+        "password": "Test@123!",
+        "isEmailVerified": "true",
+        "info": "This user havs his email already verified"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 3",
+        "email": "testuser3@test.com",
+        "password": "Test@123!",
+        "info": "This user has account deactivated",
+        "isDeactivated": true
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 4",
+        "email": "testuser4@Mainstack.com",
+        "password": "Test@123!"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 5",
+        "email": "testuser5@Mainstack.com",
+        "password": "Test@123!"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 6",
+        "email": "testuser2@Mainstack.com",
+        "password": "Test@123!"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 7",
+        "email": "testuser7@Mainstack.com",
+        "password": "Test@123!"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 8",
+        "email": "testuser8@Mainstack.com",
+        "password": "Test@123!"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 9",
+        "email": "testuser9@Mainstack.com",
+        "password": "Test@123!"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 10",
+        "email": "testuser10@Mainstack.com",
+        "password": "Test@123!"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 11",
+        "email": "testuser11@Mainstack.com",
+        "password": "Test@123!"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 12",
+        "email": "testuser12@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 13",
+        "email": "testuser13@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 14",
+        "email": "testuser14@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 15",
+        "email": "testuser15@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 16",
+        "email": "testuser16@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 17",
+        "email": "testuser17@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 18",
+        "email": "testuser18@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 19",
+        "email": "testuser19@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 20",
+        "email": "testuser20@Mainstack.com",
+        "password": "test@123"
+    },
+    {
+        "firstName": "Test",
+        "lastName": "User 21",
+        "email": "testuser21@Mainstack.com",
+        "password": "test@123"
+    }
+]

@@ -1,0 +1,1 @@
+git branch | grep -v "main" | grep -v "develop" | xargs git branch -D
