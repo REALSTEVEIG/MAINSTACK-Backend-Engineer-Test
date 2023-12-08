@@ -40,19 +40,6 @@ interface EnvVars {
   DB_NAME_TEST: string;
 }
 
-export interface MarketplaceSchema {
-  _id: Types.ObjectId | string;
-  name: string;
-  description: string;
-  uid: string;
-  author: string;
-  version: string;
-  appIcon: string;
-  appConfig: object;
-  createdAt: NativeDate;
-  updatedAt: NativeDate;
-}
-
 export interface ErrorResponse {
   message: string;
   errorCode: string;
@@ -105,7 +92,8 @@ export type ErrorCodeKeys =
   | 'notImplemented'
   | 'errBadRequest'
   | 'passwordRequired'
-  | 'userDeactivated';
+  | 'userDeactivated'
+  | 'productNotFound';
 
 export interface ErrorData {
   errorCode: string;
@@ -117,44 +105,9 @@ export type Errors = {
   [key in ErrorCodeKeys]: ErrorData;
 };
 
-export interface VerificationPayload {
-  email: string;
-  token: string;
-}
-
-export interface VerificationEmailContent {
-  to: string;
-  subject?: string;
-  body?: string;
-  html?: string;
-  verificationUrl: string;
-}
-
-export interface ForgotPasswordEmailContent {
-  to: string;
-  subject?: string;
-  body?: string;
-  html?: string;
-  forgotPasswordUrl: string;
-}
-
-export type TokenAllowedActions = 'email-verification' | 'reset-password';
-
-export interface ActionTokenPayload {
-  email: string;
-  allowedAction: TokenAllowedActions;
-  tokenId: string;
-}
-
-export type TRoutesAndAllowedActions = Array<{
-  path: string;
-  allowedActions: TokenAllowedActions[];
-}>;
-
 export type NodeEnvironment = 'development' | 'test' | 'production';
 
 export type UsersDocument = Document & IUser;
-export type ActionTokensDocument = Document & ActionTokensSchema;
 
 export interface InstalledApp {
   appId: Types.ObjectId;
@@ -178,19 +131,6 @@ export interface IUserProfile extends Document {
   }>;
 }
 
-export interface IUserNotifications extends Document {
-  push: boolean;
-  email: boolean;
-  snoozePreferences: number;
-  notifyMe: boolean[];
-}
-
-export interface IUserAccessibility extends Document {
-  name: string;
-  type: string;
-  value: string;
-}
-
 export interface IUser extends Document {
   _id: Types.ObjectId;
   authType: 'local' | 'google' | 'microsoft' | 'apple';
@@ -207,12 +147,19 @@ export interface IUser extends Document {
   updatedAt: Date;
 }
 
-export interface PasswordResetSuccessEmailContent {
-  to: string;
-  subject?: string;
-  body?: string;
-  html?: string;
-  loginUrl: string;
+export interface IProduct extends Document {
+  _id: Types.ObjectId;
+  name: string;
+  description: string;
+  price: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface NewProductData {
+  name: string;
+  description: string;
+  price: number;
 }
 
 export interface IUserGroup extends Document {
@@ -233,11 +180,6 @@ export interface NewAppData {
   author: string;
   version: string;
 }
-
-export interface ActionTokensSchema extends ActionTokenPayload {
-  _id: Types.ObjectId;
-}
-
 export interface SessionSchema extends Document {
   _id: string;
   expires: NativeDate;

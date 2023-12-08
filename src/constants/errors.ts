@@ -155,6 +155,13 @@ const errors: Errors = {
     message: 'BAD ERROR REQUEST',
   },
 
+  // Product errors
+  productNotFound: {
+    errorCode: 'product-not-found',
+    statusCode: StatusCodes.NOT_FOUND,
+    message: 'Product not found',
+  },
+
   // Server errors
   notImplemented: {
     errorCode: 'not-implemented',

@@ -5,6 +5,7 @@ import { type Document } from 'mongoose';
  * A mongoose schema plugin which applies the following in the toJSON transform call:
  *  - removes __v,  and any path that has private: true
  *  - replaces _id with id
+ *  - ensures id comes first
  */
 
 const deleteAtPath = (obj: any, path: any, index: number) => {
@@ -33,9 +34,15 @@ export const toJSON = (schema: any) => {
       delete ret._id;
       delete ret.password;
       delete ret.__v;
+
+      // Ensure id comes first
+      const orderedRet = { id: ret.id, ...ret };
+
       if (transform) {
-        return transform(doc, ret, options);
+        return transform(doc, orderedRet, options);
       }
+
+      return orderedRet;
     },
   });
 };

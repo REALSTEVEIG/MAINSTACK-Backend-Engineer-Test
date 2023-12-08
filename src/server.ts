@@ -8,7 +8,12 @@ import { requestLogger } from '@middlewares/index';
 import compression from 'compression';
 import express from 'express';
 import cors from 'cors';
-import { commonRoutes, userAuthRoutes, userRoutes } from '@routes/index';
+import {
+  commonRoutes,
+  userAuthRoutes,
+  userRoutes,
+  productRoutes,
+} from '@routes/index';
 import _ from 'lodash';
 import { getEnvironmentVariable } from './utils';
 import logRoutes from './utils/routes-logger';
@@ -23,6 +28,11 @@ let server: Server<typeof IncomingMessage, typeof ServerResponse>;
 
 const mongo = new MongoConnection();
 const env = getEnvironmentVariable('NODE_ENV');
+
+process.on('unhandledRejection', (reason, promise) => {
+  // eslint-disable-next-line no-console
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
 
 const initServer = async (): Promise<void> => {
   /* Connect database */
@@ -54,6 +64,7 @@ const initServer = async (): Promise<void> => {
   app.use('/api', commonRoutes);
   app.use('/api/auth', userAuthRoutes);
   app.use('/api/user', userRoutes);
+  app.use('/api/product', productRoutes);
 
   server = app.listen(config.PORT, () => {
     // eslint-disable-next-line no-console
