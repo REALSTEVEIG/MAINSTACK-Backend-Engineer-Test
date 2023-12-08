@@ -1,0 +1,17 @@
+version: '3'
+services:
+  node-app:
+    ports:
+      - 8000:8000
+    deploy:
+      restart_policy:
+        condition: on-failure
+    build:
+      context: .
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - MONGO_URI=${MONGO_URI}
+    command: npm start
