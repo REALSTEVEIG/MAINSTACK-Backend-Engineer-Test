@@ -16,20 +16,18 @@ describe('Signup api shoudld return valid response', () => {
   };
 
   it('should create a new user', async () => {
-    // const result = await request.post('/api/auth/signup', payload);
-    // TODO: I am commenting down these test cases for temporary. Right now will proceed with the unit test cases. and further will improve it.
-    // expect(result.status).toBe(200);
-    // expect(result.data.message).toBe('Success');
+    const result = await request.post('/api/auth/signup', payload);
+    expect(result.status).toBe(200);
   });
 
   it('should send valid error response if user already exists', async () => {
-    // try {
-    //   await request.post('/api/auth/signup', payload);
-    //   expect(true).toBe(false);
-    // } catch (error) {
-    //   const axiosError = error as AxiosError;
-    //   expect(axiosError.response?.status).toBe(409);
-    //   expect(axiosError.response?.data).toMatchObject(errors.userAlreadyExists);
-    // }
+    try {
+      await request.post('/api/auth/signup', payload);
+      expect(true).toBe(false);
+    } catch (error) {
+      const axiosError = error as AxiosError;
+      expect(axiosError.response?.status).toBe(409);
+      expect(axiosError.response?.data).toMatchObject(errors.userAlreadyExists);
+    }
   });
 });

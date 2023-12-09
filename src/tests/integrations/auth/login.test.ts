@@ -25,7 +25,6 @@ describe('Login API should return valid responses', () => {
         ...defaultUser,
         password: faker.internet.password(),
       });
-      // If request succeeds, force the test to fail, because we expect it to throw an error.
       expect(true).toBe(false);
     } catch (error) {
       const axiosError = error as AxiosError;
@@ -41,7 +40,6 @@ describe('Login API should return valid responses', () => {
         ...defaultUser,
         email: faker.internet.email(),
       });
-      // If request succeeds, force the test to fail, because we expect it to throw an error.
       expect(true).toBe(false);
     } catch (error) {
       const axiosError = error as AxiosError;
