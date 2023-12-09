@@ -5,7 +5,7 @@ const privateKey = 'asas';
 
 const signToken = (payload: object): string => {
   const token = jwt.sign({ ...payload }, privateKey, {
-    expiresIn: '1d',
+    expiresIn: '30d',
   });
   return token;
 };
