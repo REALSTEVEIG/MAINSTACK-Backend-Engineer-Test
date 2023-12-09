@@ -46,7 +46,7 @@ const authorizationMiddleware = async (
       // Token verification failed
       res.status(401).json({
         success: false,
-        message: 'Token is invalid',
+        message: 'Token is invalid, please login again!',
       });
     }
   } else {

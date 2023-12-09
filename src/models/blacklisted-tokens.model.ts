@@ -18,9 +18,9 @@ const blackListedTokens = new Schema<BlackListedToken>(
 blackListedTokens.index(
   { createdAt: 1 },
 
-  // Set the TTL index to expire after 24 hours
-  { expireAfterSeconds: 2592000 },
-); // 24 hours
+  // Set the TTL index to expire after 30 days
+  { expireAfterSeconds: 60 * 60 * 24 * 30 },
+); // 60 seconds * 60 minutes * 24 hours * 30 days = 30 days
 
 const BlackListedTokensModel = mongoose.model<BlackListedToken>(
   'blackListedTokens',
