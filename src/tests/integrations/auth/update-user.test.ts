@@ -19,7 +19,7 @@ describe('Update User Controller should return appropriate response', () => {
       });
     } catch (err) {
       const responseError = err as AxiosError;
-      expect(responseError.response?.status).toBe(401);
+      expect(responseError.response?.status).toBe(400);
       expect(responseError.response?.data).toEqual(errors.unauthorized);
     }
   });

@@ -1,5 +1,4 @@
 import { type Request, type Response, type NextFunction } from 'express';
-import errors from '@/constants/errors';
 import { isUserExist } from '@/services/users/user.service';
 import { verifyToken } from '@/utils/jwt';
 import BlackListedTokensModel from '@/models/blacklisted-tokens.model';
@@ -40,8 +39,10 @@ const authorizationMiddleware = async (
         next();
         return;
       }
-
-      res.status(404).json(errors.userNotFound);
+      res.status(403).json({
+        success: false,
+        message: 'Please login and provide a valid token',
+      });
     } catch (error) {
       // Token verification failed
       res.status(401).json({
