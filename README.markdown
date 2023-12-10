@@ -69,9 +69,11 @@ npm run test
 
 ### Integration Tests
 
-- **Authentication:** [Link to Screenshot of Authentication Tests]
-- **Create Product Endpoint:** [Link to Screenshot of Create Product Endpoint]
-- **Get All Products Endpoint:** [Link to Screenshot of Get All Products Endpoint]
+- **Tests:** <img width="960" alt="TESTS" src="https://github.com/REALSTEVEIG/MAINSTACK-Backend-Engineer-Test/assets/101066723/9161bd2d-db3c-475e-a499-a01ad2720eed">
+
+- **Create Product Endpoint:** <img width="960" alt="create product r" src="https://github.com/REALSTEVEIG/MAINSTACK-Backend-Engineer-Test/assets/101066723/be5dea87-67d9-40f0-9172-594b8215c216">
+
+- **Get All Products Endpoint:** <img width="960" alt="get all products" src="https://github.com/REALSTEVEIG/MAINSTACK-Backend-Engineer-Test/assets/101066723/58e3b99b-dbbc-4281-9138-c7d43355a84c">
 
 ## Live API
 
