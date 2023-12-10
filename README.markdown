@@ -2,7 +2,7 @@
 
 Welcome to the Backend Engineer Test project as completed by me Stephen Ignatius. This project is a simple RESTful API for creating and managing products in a store, featuring token-based authentication.
 
-## Requirements
+## Technologies
 
 - NodeJS
 - Typescript
